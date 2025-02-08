@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Javier Toquica's Art: Collections</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <img class="logo" src="/images/Uma Pumpkin Halloween.png">
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a class="normal" href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a class="active" id="dropbtn" href="art.html">Art</a>
+                        <div class="dropdown-content">
+                            <a href="illustrations.html" style="font-size: 15px";>Illustration</a>
+                            <a href="collections.html" style="font-size: 15px">Collections</a>
+                            <a href="concept.html" style="font-size: 15px">Concept</a>
+                            <a href="sketches.html" style="font-size: 15px">Sketches</a>
+                          </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="normal" id="dropbtn" href="animation.html">Animation</a>
+                        <div class="dropdown-content">
+                            <a href="storyboards.html" style="font-size: 15px";>Story Boards</a>
+                            <a href="2Danimations.html" style="font-size: 15px">2D Animation</a>
+                            <a href="3Danimations.html" style="font-size: 15px">3D Animations</a>
+                          </div>
+                    </li>
+                    <li><a class="normal" href="gamedev.html">GameDev</a></li>
+                    <li><a class="normal" href="about.html">About</a></li>
+                    <li><a class="normal" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div>
+    <div class="slideCont">
+        <div class="slides">
+            <a href="/images/collections/halloween2024/hw2401Blm.JPG">
+            <img class="art cursor" src="/images/collections/halloween2024/hw2401Blm.JPG" alt="Umalna(FFXI) and Sophina(FFXIV) Black Mage">
+            </a>
+        </div>
+        <div class="slides">
+            <a href="/images/collections/halloween2024/hw2402Mnk.JPG">
+            <img class="art cursor" src="/images/collections/halloween2024/hw2402Mnk.JPG" alt="Gwen(FFXI) and Zack(FFXIV) Monk">
+            </a>
+        </div>
+        <div class="slides">
+            <a href="/images/collections/halloween2024/hw2403Whm.PNG">
+            <img class="art cursor" src="/images/collections/halloween2024/hw2403Whm.PNG" alt="Eugene(FFXI) and Anemone(FFXIV) White Mage">
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <h1 id="flavor"></h1>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="preRow padding">
+            <img class="demoImg cursor preArt" src="/images/collections/halloween2024/hw2401Blm.JPG" alt="Umalna(FFXI) and Sophina(FFXIV) Black Mage" onclick="currentSlide(1)">
+            <img class="demoImg cursor preArt" src="/images/collections/halloween2024/hw2402Mnk.JPG" alt="Gwen(FFXI) and Zack(FFXIV) Monk" onclick="currentSlide(2)">
+            <img class="demoImg cursor preArt" src="/images/collections/halloween2024/hw2403Whm.PNG" alt="Eugene(FFXI) and Anemone(FFXIV) White Mage" onclick="currentSlide(3)">
+
+    </div>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.display = "block";
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+            navLinks.style.display = "none";
+        }
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("demoImg");
+        let captions = document.getElementById("flavor");
+  
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+            dots[i].className = dots[i].className.replace(" select", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        dots[slideIndex-1].className += " select";
+        captions.innerHTML = dots[slideIndex-1].alt;
+        }
+
+        document.onkeydown = function(n) {
+            switch (n.keyCode) {
+                case 37:
+                    //left
+                    n.preventDefault();
+                    slideIndex--;
+                    showSlides(slideIndex);
+                    break;
+                case 39:
+                    //right
+                    n.preventDefault();
+                    slideIndex++;
+                    showSlides(slideIndex);
+                    break;
+            }
+        }
+    </script>
+
+    <div class="footer">
+        <h4>© 2025 Javier Toquica</h4>
+    </div>
+</body>
+</html>

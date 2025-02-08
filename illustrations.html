@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Javier Toquica's Art: Illustrations</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <img class="logo" src="/images/Uma Pumpkin Halloween.png">
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a class="normal" href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a class="active" id="dropbtn" href="art.html">Art</a>
+                        <div class="dropdown-content">
+                            <a href="illustrations.html" style="font-size: 15px";>Illustration</a>
+                            <a href="collections.html" style="font-size: 15px">Collections</a>
+                            <a href="concept.html" style="font-size: 15px">Concept</a>
+                            <a href="sketches.html" style="font-size: 15px">Sketches</a>
+                          </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="normal" id="dropbtn" href="animation.html">Animation</a>
+                        <div class="dropdown-content">
+                            <a href="storyboards.html" style="font-size: 15px";>Story Boards</a>
+                            <a href="2Danimations.html" style="font-size: 15px">2D Animation</a>
+                            <a href="3Danimations.html" style="font-size: 15px">3D Animations</a>
+                          </div>
+                    </li>
+                    <li><a class="normal" href="gamedev.html">GameDev</a></li>
+                    <li><a class="normal" href="about.html">About</a></li>
+                    <li><a class="normal" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div>
+    <div class="row topDes">
+        <h1>Illustrations</h1>
+    </div>
+    <div class="rowIll">
+            <img class="galleryThumb" id="myImg0" src="/images/illustrations/winter2024.JPG" alt="Umalna Dodging a Snowball (Winter 2024)">
+            <img class="galleryThumb" id="myImg1"  src="/images/illustrations/summer2024.PNG" alt="Inoma's Awkward Selfie at the Festival (Summer 2024)">
+            <img class="galleryThumb" id="myImg6"  src="/images/illustrations/pride2024.PNG" alt="Umalna Crew Celebrates Pride (2024)">
+            <img class="galleryThumb" id="myImg2"  src="/images/illustrations/spring2024.PNG" alt="Cherry Blossom Festival with the Crew (Spring 2024)">
+            <img class="galleryThumb" id="myImg3"  src="/images/illustrations/christmas2023.JPG" alt="Squire Putting the Finishing Touches on her Snowman (Winter 2024)">
+            <img class="galleryThumb" id="myImg4" src="/images/illustrations/harvest2023.png" alt="Umalna's Harvest (Fall 2023)">
+            <img class="galleryThumb" id="myImg5"  src="/images/illustrations/summer2023.png" alt="Novv Showing Iggy the Beauty of the Reef (Summer 2023)">
+            <img class="galleryThumb" id="myImg7" src="/images/illustrations/spring2023.PNG" alt="Mischievous Little Imp Stealing Her Brother's Flower (Spring 2023)">
+            <img class="galleryThumb" id="myImg8" src="/images/illustrations/self1.PNG" alt="Self Portrait (2021)">
+            <img class="galleryThumb" id="myImg9"  src="/images/illustrations/christmas2020.PNG" alt="Iggy and Friends Dressing ">
+            <img class="galleryThumb" id="myImg10"  src="/images/illustrations/winterScape2018.PNG" alt="Mistletoe Under the Dark Sun (Winter 2018)">
+            <img class="galleryThumb" id="myImg11"  src="/images/illustrations/summerBeach1F.PNG" alt="Umalna and Her Friends Beach Time Fun (Summer 2018)">
+            <img class="galleryThumb" id="myImg12"  src="/images/illustrations/summerBeach2F.PNG" alt="Scholar's Game of Beach Chicken... Go! (Summer 2024)">
+            <img class="galleryThumb" id="myImg13" src="/images/illustrations/kirbyLearn.JPG" alt="Illustration of &quotTime to Learn&quot for Milkyway Wishes (2007)">
+            <img class="galleryThumb" id="myImg14" src="/images/illustrations/kirbySword.JPG" alt="Illustration of &quotSword Ability&quot for Milkyway Wishes (2007)">
+            <img class="galleryThumb" id="myImg15" src="#" alt="">
+            <img class="galleryThumb" id="myImg16" src="#" alt="">
+            <img class="galleryThumb" id="myImg17" src="#" alt="">
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modalContent" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captions = document.getElementById("caption");
+        var images = document.getElementsByClassName("galleryThumb")
+
+        for (var i = 0; i < images.length; i++){
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captions.innerHTML = this.alt;
+            }
+        }
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.display = "block";
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+            navLinks.style.display = "none";
+        }
+    </script>
+    <div class="footer">
+        <h4>© 2025 Javier Toquica</h4>
+    </div>
+</body>
+</html>
