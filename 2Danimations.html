@@ -17,7 +17,7 @@
                 <ul>
                     <li><a class="normal" href="/">Home</a></li>
                     <li class="dropdown">
-                        <a class="active" id="dropbtn" href="art.html">Art</a>
+                        <a class="normal" id="dropbtn" href="art.html">Art</a>
                         <div class="dropdown-content">
                             <a href="illustrations.html" style="font-size: 15px";>Illustration</a>
                             <a href="collections.html" style="font-size: 15px">Collections</a>
@@ -26,7 +26,7 @@
                           </div>
                     </li>
                     <li class="dropdown">
-                        <a class="normal" id="dropbtn" href="animation.html">Animation</a>
+                        <a class="active" id="dropbtn" href="animation.html">Animation</a>
                         <div class="dropdown-content">
                             <a href="storyboards.html" style="font-size: 15px";>Story Boards</a>
                             <a href="2Danimations.html" style="font-size: 15px">2D Animation</a>
@@ -41,14 +41,57 @@
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
     <div>
-    <div class="row">
-        <div class="content-col">
-        <h1 style="color: white;">Sorry Under Construction!</h1>
-        <img class="errorImg" src="images/illustrations/kirbySword.JPG" style="width: 75%; margin-top: 35px;">
-    </div>
-    </div>
-    <div class="footer">
-        <h4>© 2025 Javier Toquica</h4>
-    </div>
-</body>
-</html>
+        <div class="row topDes">
+            <h1>2D Animations</h1>
+        </div>
+        <div class="rowIll">
+                <video controls class="galleryThumb" id="myImg0"> <source src="/images/animations/Uma Email.mp4" type="video/mp4"></video>
+                <video controls class="galleryThumb" id="myImg1"> <source src="/images/animations/alataHug.mp4" type="video/mp4"></video>
+                <video controls class="galleryThumb" id="myImg2"> <source src="/images/animations/Uma Transform.mp4" type="video/mp4"></video>
+                <video controls class="galleryThumb" id="myImg3"> <source src="/images/animations/clipStudioTest2018.mov" type="video/mov"></video>
+                <video controls class="galleryThumb" id="myImg4"> <source src="/images/animations/iPadEugeneUma2016.mp4" type="video/mp4"></video>
+                <video controls class="galleryThumb" id="myImg5"> <source src="/images/animations/iPadGwen2016.mp4" type="video/mp4"></video>
+        </div>
+    
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modalContent" id="img01">
+            <div id="caption"></div>
+        </div>
+    
+        <script>
+            var modal = document.getElementById("myModal");
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captions = document.getElementById("caption");
+            var images = document.getElementsByClassName("galleryThumb")
+    
+            for (var i = 0; i < images.length; i++){
+                images[i].onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captions.innerHTML = this.alt;
+                }
+            }
+            var span = document.getElementsByClassName("close")[0];
+    
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+    
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.display = "block";
+                navLinks.style.right = "0";
+            }
+    
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+                navLinks.style.display = "none";
+            }
+        </script>
+        <div class="footer">
+            <h4>© 2025 Javier Toquica</h4>
+        </div>
+    </body>
+    </html>
