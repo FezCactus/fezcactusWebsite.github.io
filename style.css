@@ -624,12 +624,15 @@ nav .fa-solid{
   .galleryPre{
     margin: 10px 0px 10px 30px;
   }
-  .rowIll{
-    overflow: hidden;
+  .row.topDes{
+    margin-bottom: 1em;
   }
+  .topDes H1{
+    font-size: 50px;
+  }
+
   .galleryThumb{
-    width: 300px;
-    height: fit-content;
+    height: 150px;
     box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.75);
   }
   #umaEmail{
