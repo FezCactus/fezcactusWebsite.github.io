@@ -565,9 +565,11 @@ nav .fa-solid{
     background-color: rgba(125, 0, 136, 1);
     transition: right 300ms ease-out;
     box-shadow: 0px 5px 10px 0px;
+    display: none;
   }
   .nav-links.show{
     right: 0;
+    display: block;
   }
   .navbar ul li{
     display: inline-flex;
@@ -586,7 +588,7 @@ nav .fa-solid{
   
   .row{
     flex-direction: column;
-    margin: 5%;
+
   }
   
   .content-col{
@@ -635,5 +637,8 @@ nav .fa-solid{
   }
   #socials{
     display: inline-block;
+  }
+  .footer{
+    width: 90vw;
   }
 }
