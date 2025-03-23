@@ -55,43 +55,6 @@
                 <video controls class="galleryThumb" id="myImg5"> <source src="/images/animations/iPadGwen2016.mp4" type="video/mp4"></video>
         </div>
     
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modalContent" id="img01">
-            <div id="caption"></div>
-        </div>
-    
-        <script>
-            var modal = document.getElementById("myModal");
-            var img = document.getElementById("myImg");
-            var modalImg = document.getElementById("img01");
-            var captions = document.getElementById("caption");
-            var images = document.getElementsByClassName("galleryThumb")
-    
-            for (var i = 0; i < images.length; i++){
-                images[i].onclick = function(){
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captions.innerHTML = this.alt;
-                }
-            }
-            var span = document.getElementsByClassName("close")[0];
-    
-            span.onclick = function() { 
-                modal.style.display = "none";
-            }
-    
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-                navLinks.style.display = "block";
-                navLinks.style.right = "0";
-            }
-    
-            function hideMenu(){
-                navLinks.style.right = "-200px";
-                navLinks.style.display = "none";
-            }
-        </script>
         <div class="footer">
             <h4>© 2025 Javier Toquica</h4>
         </div>
