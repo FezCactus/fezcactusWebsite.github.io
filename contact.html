@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link href="/assests/css/fontawesome.css" rel="stylesheet">
+    <link href="/assests/css/solid.css" rel="stylesheet">
     <link href="/assests/css/brands.css" rel="stylesheet">
-    <title>Javier Toquica's Art: Concepts</title>
+    <link href="/assests/css/fontawesome.min.css" rel="stylesheet">
+    <title>Javier Toquica's Contacts</title>
 </head>
 <body>
     <div class="header">
-        <nav class="navbar">
+        <nav class="navbar" id="navBar">
             <a href="/"><img class="logo" src="/images/thumbnails/logo.PNG"></a>
+            <button id="openSideButton" class="fa-solid fa-bars" onclick="openSidebar()"></button>
             <div class="nav-links" id="navLinks">
-                <i class="fa-solid fa-bars fa-xmark" onclick="hideMenu()"></i>
+                <button id="closeSideButton" class="fa-solid fa-x" onclick="closeSidebar()"></button>
                 <ul>
                     <li><a class="normal" href="/">Home</a></li>
                     <li class="dropdown">
@@ -38,18 +41,18 @@
                     <li><a class="active" href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
     <div>
+    <div id="overlay" onclick="closeSidebar()"></div>
     <div class="row">
             <h1 style="color: white;">Click on Uma to Send an Email!</h1>
     </div>
     <div class="row padding">
         <a class="cursor" href="mailto:neo.forte@gmail.com">
-            <img src="images/thumbnails/IMG_0075.GIF" style="width: 500px;">
+            <img id="umaEmail" src="images/thumbnails/IMG_0075.GIF" style="width: 500px;">
         </a>
     </div>
-    <div class="row padding social">
+    <div class="row padding social" id="socials">
         <a class="fa-brands fa-facebook" href="https://www.facebook.com/javier.toquica.9"></a>
         <a class="fa-brands fa-x-twitter" href="https://x.com/fezcactus"></a>
         <a class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/javier-toquica-6298a044"></a>

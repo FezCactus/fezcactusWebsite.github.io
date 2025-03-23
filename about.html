@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Javier Toquica's Art: Concepts</title>
+    <link href="/assests/css/solid.css" rel="stylesheet">
+    <link href="/assests/css/fontawesome.min.css" rel="stylesheet">
+    <title>Javier Toquica's About Me</title>
 </head>
 <body>
     <div class="header">
-        <nav class="navbar">
+        <nav class="navbar" id="navBar">
             <a href="/"><img class="logo" src="/images/thumbnails/logo.PNG"></a>
+            <button id="openSideButton" class="fa-solid fa-bars" onclick="openSidebar()"></button>
             <div class="nav-links" id="navLinks">
-                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <button id="closeSideButton" class="fa-solid fa-x" onclick="closeSidebar()"></button>
                 <ul>
                     <li><a class="normal" href="/">Home</a></li>
                     <li class="dropdown">
@@ -25,7 +28,7 @@
                           </div>
                     </li>
                     <li class="dropdown">
-                        <a class="normal" id="dropbtn" href="animation.html">Animation</a>
+                        <a class="active" id="dropbtn" href="animation.html">Animation</a>
                         <div class="dropdown-content">
                             <a href="storyboards.html" style="font-size: 15px";>Story Boards</a>
                             <a href="2Danimations.html" style="font-size: 15px">2D Animation</a>
@@ -33,13 +36,13 @@
                           </div>
                     </li>
                     <li><a class="normal" href="gamedev.html">GameDev</a></li>
-                    <li><a class="active" href="about.html">About</a></li>
+                    <li><a class="normal" href="about.html">About</a></li>
                     <li><a class="normal" href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
     <div>
+    <div id="overlay" onclick="closeSidebar()"></div>
     <div class="rowGrid">
         <div class="content-col">
             <h1 style="color: white;">Javier L. Toquica</h1>
